@@ -53,7 +53,7 @@ struct ContentView: View {
                         for i in 0..<4 {
                             waitCount = i
                             do {
-                                try await Task.sleep(nanoseconds: UInt64(1_000_000_000))  // 0.5秒待つ
+                                try await Task.sleep(nanoseconds: UInt64(700_000_000))  // 0.5秒待つ
                             }
                         }
                     }
@@ -132,12 +132,13 @@ struct ContentView: View {
                             for i in 0..<4 {
                                 waitCount = i
                                 do {
-                                    try await Task.sleep(nanoseconds: UInt64(1_000_000_000))  // 0.5秒待つ
+                                    try await Task.sleep(nanoseconds: UInt64(700_000_000))  // 0.5秒待つ
                                 }
                             }
                         }
                     }label: {
-                        Text("　Re Start!!　")
+                        Text("Re Start!!")
+                            .padding()
                             .font(.system(size: 20))
                     }
                     .border(Color.blue, width: 2)
